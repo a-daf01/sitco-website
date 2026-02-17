@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Semantic Colors */
+  --color-page: var(--bg-page);
+  --color-card: var(--bg-card);
+  --color-main: var(--text-main);
+  --color-muted: var(--text-muted);
+  --color-border: var(--border-color);
+
+  /* Brand Colors */
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+
+  /* Legacy/Palette Colors (Keep for compatibility if needed, but prefer semantic) */
+  --color-navy-900: #0F172A;
+  --color-navy-950: #020617;
+  --color-emerald-500: #10B981;
+  --color-emerald-600: #059669;
+
+  --font-sans: var(--font-inter), var(--font-cairo), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Light Mode (Default Root) */
+:root {
+  /* Backgrounds */
+  --bg-page: #F0F9FF;
+  /* Sky-50 - More exciting than Slate-50 */
+  --bg-card: #FFFFFF;
+  /* White */
+  --bg-card-rgb: 255, 255, 255;
+
+  /* Text */
+  --text-main: #0F172A;
+  /* Slate-900 */
+  --text-muted: #475569;
+  /* Slate-600 - Darker for better contrast on light bg */
+
+  /* Borders */
+  --border-color: #E0F2FE;
+  /* Sky-100 */
+
+  /* Brand */
+  --brand-500: #10B981;
+  /* Emerald-500 */
+  --brand-600: #059669;
+  /* Emerald-600 */
+
+  --background: #F0F9FF;
+  --foreground: #0F172A;
+}
+
+/* Dark Mode */
+:root.dark {
+  /* Backgrounds */
+  --bg-page: #020617;
+  /* Navy-950/Slate-950 */
+  --bg-card: #0F172A;
+  /* Slate-900 */
+  --bg-card-rgb: 15, 23, 42;
+
+  /* Text */
+  --text-main: #F8FAFC;
+  /* Slate-50 */
+  --text-muted: #94A3B8;
+  /* Slate-400 */
+
+  /* Borders */
+  --border-color: #1E293B;
+  /* Slate-800 */
+
+  /* Brand */
+  --brand-500: #10B981;
+  --brand-600: #059669;
+
+  --background: #020617;
+  --foreground: #F8FAFC;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism Utility - Context Aware */
+.glass {
+  background: rgba(var(--bg-card-rgb, 15, 23, 42), 0.7);
+  /* Fallback */
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-500);
 }
