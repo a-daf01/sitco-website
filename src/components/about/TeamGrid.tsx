@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
+import Image from 'next/image';
 
 const TeamGrid = () => {
     const { t } = useTranslation();
@@ -33,9 +34,11 @@ const TeamGrid = () => {
                             className="group relative overflow-hidden rounded-2xl aspect-[3/4]"
                         >
                             {/* Image */}
-                            <img
+                            <Image
                                 src={member.image}
                                 alt={member.name}
+                                width={400}
+                                height={600}
                                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
                             />
 

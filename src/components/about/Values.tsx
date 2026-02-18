@@ -33,6 +33,12 @@ const Values = () => {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-main mb-4">{t('valuesTitle')}</h2>
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        viewport={{ once: true }}
+                        className="h-1 w-24 bg-emerald-500 mx-auto rounded-full mb-6"
+                    />
                     <p className="text-muted">{t('valuesSubtitle')}</p>
                 </div>
 

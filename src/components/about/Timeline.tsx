@@ -7,12 +7,13 @@ const Timeline = () => {
     const { t } = useTranslation();
 
     const milestones = [
+        { year: '1996', title: t('milestone1996Title'), description: t('milestone1996Desc') },
         { year: '2004', title: t('milestone2004Title'), description: t('milestone2004Desc') },
-        { year: '2010', title: t('milestone2010Title'), description: t('milestone2010Desc') },
+        { year: '2007', title: t('milestone2007Title'), description: t('milestone2007Desc') },
+        { year: '2011', title: t('milestone2011Title'), description: t('milestone2011Desc') },
         { year: '2015', title: t('milestone2015Title'), description: t('milestone2015Desc') },
-        { year: '2020', title: t('milestone2020Title'), description: t('milestone2020Desc') },
-        { year: '2022', title: t('milestone2022Title'), description: t('milestone2022Desc') },
-        { year: '2023', title: t('milestone2023Title'), description: t('milestone2023Desc') },
+        { year: '2018', title: t('milestone2018Title'), description: t('milestone2018Desc') },
+        { year: '2021', title: t('milestone2021Title'), description: t('milestone2021Desc') },
         { year: '2024', title: t('milestone2024Title'), description: t('milestone2024Desc') }
     ];
 
@@ -21,6 +22,12 @@ const Timeline = () => {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-main mb-4">{t('journeyTitle')}</h2>
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        viewport={{ once: true }}
+                        className="h-1 w-24 bg-emerald-500 mx-auto rounded-full mb-6"
+                    />
                     <p className="text-muted">{t('journeySubtitle')}</p>
                 </div>
 

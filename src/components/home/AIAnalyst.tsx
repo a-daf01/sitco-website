@@ -52,7 +52,7 @@ const AIAnalyst = () => {
                                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                                 </div>
-                                <span className="text-xs text-muted font-mono">SITCO_Smart_Nexus.exe</span>
+                                <span className="text-xs text-muted font-mono">SITCO Smart Nexus</span>
                             </div>
 
                             {/* Chat Area */}
@@ -63,7 +63,7 @@ const AIAnalyst = () => {
                                     key={step < 2 ? "q1" : "server"}
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={{ opacity: 1, x: 0 }}
-                                    className="flex gap-3"
+                                    className="flex gap-3 optimize-gpu"
                                 >
                                     <div className="w-8 h-8 rounded-full bg-muted/20 flex items-center justify-center shrink-0">
                                         <User size={16} className="text-muted" />
@@ -98,7 +98,7 @@ const AIAnalyst = () => {
                                         key={step}
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        className="flex gap-3"
+                                        className="flex gap-3 optimize-gpu"
                                     >
                                         <div className="w-8 h-8 rounded-full bg-electric-blue/20 flex items-center justify-center shrink-0">
                                             <Bot size={16} className="text-electric-blue" />

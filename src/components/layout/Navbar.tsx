@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMatrix } from '@/context/MatrixContext';
 import { useTranslation } from '@/hooks/useTranslation';
+import Image from 'next/image';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,15 @@ const Navbar = () => {
                             ease: "easeInOut"
                         }}
                     >
-                        <img src="/sitco_logo.png" alt="SITCO Logo" className="h-20 w-auto relative z-10" />
+
+                        <Image
+                            src="/sitco_logo.png"
+                            alt="SITCO Logo"
+                            width={80}
+                            height={80}
+                            className="h-20 w-auto relative z-10"
+                            priority
+                        />
                     </motion.div>
                 </Link>
 

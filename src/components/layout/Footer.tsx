@@ -3,12 +3,14 @@
 import Link from 'next/link';
 import { Mail, MapPin } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
+import VCISOBadge from './VCISOBadge';
 
 const Footer = () => {
     const { t } = useTranslation();
 
     return (
-        <footer className="bg-muted/5 pt-20 pb-10 border-t border-border">
+        <footer className="bg-muted/5 pt-20 pb-10 border-t border-border relative">
+            <VCISOBadge />
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 
@@ -49,8 +51,7 @@ const Footer = () => {
                             <li className="flex items-start gap-3">
                                 <MapPin className="text-emerald-500 shrink-0 mt-1" size={18} />
                                 <span>
-                                    {t('addressLine1')}<br />
-                                    {t('addressLine2')}
+                                    {t('addressLine1')} {t('addressLine2')}
                                 </span>
                             </li>
                             <li className="flex items-center gap-3">

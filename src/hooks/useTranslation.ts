@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { useMatrix } from '@/context/MatrixContext';
 import { translations } from '@/data/locales';
 
@@ -7,12 +8,14 @@ export const useTranslation = () => {
     // Fallback to english if lang is undefined
     const currentLang = lang || 'en';
 
+    const t = useCallback((key: keyof typeof translations.en) => {
+        const translation = (translations[currentLang as keyof typeof translations] as any)[key];
+        // If translation missing, fallback to English or the key itself
+        return translation || translations['en'][key] || key;
+    }, [currentLang]);
+
     return {
-        t: (key: keyof typeof translations.en) => {
-            const translation = translations[currentLang][key];
-            // If translation missing, fallback to English or the key itself
-            return translation || translations['en'][key] || key;
-        },
+        t,
         lang: currentLang,
         dir: currentLang === 'ar' ? 'rtl' : 'ltr'
     };

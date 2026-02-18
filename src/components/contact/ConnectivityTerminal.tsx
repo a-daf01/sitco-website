@@ -45,7 +45,7 @@ const ConnectivityTerminal = () => {
             timeouts.forEach(clearTimeout);
             clearInterval(loopInterval);
         };
-    }, []); // Removed t dependency to prevent loop reset on language change if not needed, but text needs update. 
+    }, [t]);
     // Actually, if language changes, we WANT to update text.
     // But `commands` is re-created on render.
     // The timeouts capture the `text` from the render where they were scheduled.
@@ -72,7 +72,7 @@ const ConnectivityTerminal = () => {
             <div className="bg-slate-800 p-4 border-b border-slate-700 flex items-center justify-between shrink-0">
                 <div className="flex items-center gap-3">
                     <Terminal size={18} className="text-slate-400" />
-                    <span className="text-slate-400 font-medium">establish_partnership.exe</span>
+                    <span className="text-slate-400 font-medium">{t('establishPartnership')}</span>
                 </div>
                 <div className="flex gap-2">
                     <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50" />

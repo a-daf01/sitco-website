@@ -30,6 +30,12 @@ export default function ContactPage() {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-main mb-6">{t('initiateProtocol')}</h2>
+                        <motion.div
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            viewport={{ once: true }}
+                            className="h-1 w-24 bg-emerald-500 mx-auto rounded-full mb-8"
+                        />
 
                         {/* SITCO HQ Badge */}
                         <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-md">

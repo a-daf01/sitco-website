@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { useMatrix } from '@/context/MatrixContext';
 import { useTranslation } from '@/hooks/useTranslation';
+import Image from 'next/image';
 
 const DashboardTilt = () => {
     const ref = useRef(null);
@@ -35,10 +36,13 @@ const DashboardTilt = () => {
                     {/* Dashboard Mockup Container */}
                     <div className="bg-slate-900 border border-white/10 rounded-xl shadow-2xl overflow-hidden backdrop-blur-sm group">
                         <div className="relative w-full bg-navy-950/50">
-                            <img
+                            <Image
                                 src={imageSrc}
                                 alt={t('erpInterfaceAlt')}
+                                width={1200}
+                                height={800}
                                 className="w-full h-auto object-contain"
+                                priority
                             />
 
                             {/* Overlay Scanline Effect */}

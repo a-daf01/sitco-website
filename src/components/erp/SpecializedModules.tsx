@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import {
     Briefcase, Activity, Landmark, MessageSquare, FileText,
-    GraduationCap, Building, Wrench, Ticket, UserCheck
+    GraduationCap, Building, Wrench, Ticket, UserCheck, Scale, Shield
 } from 'lucide-react';
 
 import { useTranslation } from '@/hooks/useTranslation';
@@ -21,7 +21,9 @@ const SpecializedModules = () => {
         { icon: <Building />, title: t('specModFacility') },
         { icon: <Wrench />, title: t('specModAsset') },
         { icon: <Ticket />, title: t('specModTicket') },
-        { icon: <UserCheck />, title: t('specModVisitor') }
+        { icon: <UserCheck />, title: t('specModVisitor') },
+        { icon: <Scale />, title: t('specModLegal') },
+        { icon: <Shield />, title: t('specModSecurity') }
     ];
 
     return (
@@ -36,13 +38,19 @@ const SpecializedModules = () => {
                     >
                         {t('level3Badge')}
                     </motion.div>
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        viewport={{ once: true }}
+                        className="h-1 w-24 bg-emerald-500 mx-auto rounded-full mb-6"
+                    />
                     <h2 className="text-3xl md:text-5xl font-bold text-main mb-6">{t('specModSectionTitle')}</h2>
                     <p className="text-muted max-w-2xl mx-auto">
                         {t('specModSectionDesc')}
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                     {specializedModules.map((module, index) => (
                         <motion.div
                             key={index}
