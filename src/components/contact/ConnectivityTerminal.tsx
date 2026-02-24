@@ -9,20 +9,22 @@ const ConnectivityTerminal = () => {
     const [lines, setLines] = useState<string[]>([]);
     const { t } = useTranslation();
 
-    const commands = [
-        { text: t('termInit'), type: "cmd", delay: 500 },
-        { text: t('termSignal'), type: "info", delay: 1500 },
-        { text: t('termHandshake'), type: "success", delay: 2500 },
-        { text: t('termSecure'), type: "success", delay: 3500 },
-        { text: t('termSync'), type: "info", delay: 4500 },
-        { text: t('termReady'), type: "cmd", delay: 5500 },
-        { text: t('termEncrypt'), type: "sub", delay: 6000 },
-        { text: t('termPriority'), type: "sub", delay: 6500 },
-        { text: t('termAwait'), type: "success", delay: 7500 },
-    ];
+
 
     useEffect(() => {
         let timeouts: NodeJS.Timeout[] = [];
+
+        const commands = [
+            { text: t('termInit'), type: "cmd", delay: 500 },
+            { text: t('termSignal'), type: "info", delay: 1500 },
+            { text: t('termHandshake'), type: "success", delay: 2500 },
+            { text: t('termSecure'), type: "success", delay: 3500 },
+            { text: t('termSync'), type: "info", delay: 4500 },
+            { text: t('termReady'), type: "cmd", delay: 5500 },
+            { text: t('termEncrypt'), type: "sub", delay: 6000 },
+            { text: t('termPriority'), type: "sub", delay: 6500 },
+            { text: t('termAwait'), type: "success", delay: 7500 },
+        ];
 
         // Reset and start animation loop
         const runAnimation = () => {

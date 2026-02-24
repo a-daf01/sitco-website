@@ -4,7 +4,15 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function sendEmail(formData: any) {
+interface EmailFormData {
+    name: string;
+    email: string;
+    service: string;
+    budget: string;
+    message: string;
+}
+
+export async function sendEmail(formData: EmailFormData) {
     try {
         const { name, email, service, budget, message } = formData;
 

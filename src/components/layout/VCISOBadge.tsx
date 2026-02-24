@@ -17,7 +17,7 @@ const VCISOBadge = () => {
             {/* Tooltip */}
             <div className="absolute bottom-full start-0 mb-2 w-48 bg-slate-900 border border-emerald-500/30 p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-xl">
                 <p className="text-xs text-slate-300 leading-relaxed">
-                    This platform is secured by SITCO's sovereign vCISO protocols.
+                    This platform is secured by SITCO&apos;s sovereign vCISO protocols.
                     <br />
                     <span className="text-emerald-500 font-mono mt-1 block">&gt; Encryption: AES-256</span>
                 </p>

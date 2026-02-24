@@ -1,25 +1,25 @@
 ﻿'use client';
 
 import { motion } from 'framer-motion';
-import { Terminal, Check, AlertCircle } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const TechTerminal = () => {
     const [lines, setLines] = useState<string[]>([]);
 
-    const commands = [
-        { text: "> Initializing SITCO Secure Protocol...", type: "cmd", delay: 500 },
-        { text: "> Handshake issued to Riyadh-Core-01", type: "info", delay: 1500 },
-        { text: "> Verifying Identity... [OK]", type: "success", delay: 2500 },
-        { text: "> Establishing Encrypted Uplink...", type: "info", delay: 3500 },
-        { text: "> Connection Secure. Latency: 12ms", type: "success", delay: 4500 },
-        { text: "> Deploying Microservices...", type: "cmd", delay: 5500 },
-        { text: "  - Neural Engine: Active", type: "sub", delay: 6000 },
-        { text: "  - Data Vault: Locked", type: "sub", delay: 6500 },
-        { text: "> System Ready.", type: "success", delay: 7500 },
-    ];
-
     useEffect(() => {
+        const commands = [
+            { text: "> Initializing SITCO Secure Protocol...", type: "cmd", delay: 500 },
+            { text: "> Handshake issued to Riyadh-Core-01", type: "info", delay: 1500 },
+            { text: "> Verifying Identity... [OK]", type: "success", delay: 2500 },
+            { text: "> Establishing Encrypted Uplink...", type: "info", delay: 3500 },
+            { text: "> Connection Secure. Latency: 12ms", type: "success", delay: 4500 },
+            { text: "> Deploying Microservices...", type: "cmd", delay: 5500 },
+            { text: "  - Neural Engine: Active", type: "sub", delay: 6000 },
+            { text: "  - Data Vault: Locked", type: "sub", delay: 6500 },
+            { text: "> System Ready.", type: "success", delay: 7500 },
+        ];
+
         let timeouts: NodeJS.Timeout[] = [];
 
         // Reset and start animation loop

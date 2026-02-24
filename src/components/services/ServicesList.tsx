@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BrainCircuit, ShieldCheck, Database, X, ArrowRight, Code, Cloud, LineChart, Bot, Layout, Server, HardDrive, Lock } from 'lucide-react';
+import { ShieldCheck, Database, X, ArrowRight, Code, Cloud, LineChart, Bot, Layout, Server, HardDrive, Lock } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
 
 const ServicesList = () => {

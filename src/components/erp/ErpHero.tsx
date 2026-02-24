@@ -1,7 +1,7 @@
 ﻿'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck, Zap, Globe } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Globe } from 'lucide-react';
 import Link from 'next/link';
 
 

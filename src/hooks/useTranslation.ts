@@ -9,7 +9,8 @@ export const useTranslation = () => {
     const currentLang = lang || 'en';
 
     const t = useCallback((key: keyof typeof translations.en) => {
-        const translation = (translations[currentLang as keyof typeof translations] as any)[key];
+        const langData = translations[currentLang as keyof typeof translations] as typeof translations.en;
+        const translation = langData[key];
         // If translation missing, fallback to English or the key itself
         return translation || translations['en'][key] || key;
     }, [currentLang]);

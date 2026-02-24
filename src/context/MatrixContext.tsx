@@ -26,7 +26,9 @@ export const MatrixProvider = ({ children }: { children: React.ReactNode }) => {
         const savedLang = localStorage.getItem('matrix-lang') as Lang;
         const savedTheme = localStorage.getItem('matrix-theme') as Theme;
 
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         if (savedLang) setLang(savedLang);
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         if (savedTheme) setTheme(savedTheme);
 
         setMounted(true);

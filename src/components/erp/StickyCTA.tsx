@@ -1,7 +1,6 @@
 'use client';
 
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
-import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { MessageSquareText } from 'lucide-react';
 import Link from 'next/link';
 

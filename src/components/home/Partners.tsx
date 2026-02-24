@@ -1,13 +1,9 @@
 ﻿'use client';
 
-import { useRef, useEffect } from "react";
 import {
     motion,
-    useScroll,
-    useSpring,
     useTransform,
     useMotionValue,
-    useVelocity,
     useAnimationFrame
 } from "framer-motion";
 import Link from 'next/link';
@@ -20,11 +16,7 @@ function wrap(min: number, max: number, v: number) {
     return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
 }
 
-import { MotionValue } from "framer-motion";
 
-function useParallax(value: MotionValue<number>, distance: number) {
-    return useTransform(value, (v) => wrap(-distance, 0, v));
-}
 
 const partners = [
     { name: 'Abudawood', url: 'https://abudawood.com', logo: '/partners/abudawood.png' },
@@ -42,7 +34,6 @@ const partners = [
 
 const InteractableMarquee = () => {
     const baseX = useMotionValue(0);
-    const containerRef = useRef<HTMLDivElement>(null);
 
     // We need to know the width of the content to wrap correctly.
     // For now, let's estimate or just use a very large scrollable area and a reset.
@@ -54,7 +45,7 @@ const InteractableMarquee = () => {
     const baseVelocity = -0.05; // px per ms
 
     useAnimationFrame((time, delta) => {
-        let moveBy = baseVelocity * delta;
+        const moveBy = baseVelocity * delta;
         // Apply the movement to the motion value
         baseX.set(baseX.get() + moveBy);
     });
