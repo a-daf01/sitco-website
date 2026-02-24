@@ -2,13 +2,13 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-    const nonce = Buffer.from(crypto.randomUUID()).toString('base64');
+    // Permissive CSP for initial troubleshooting and standard Next.js functionality
     const cspHeader = `
     default-src 'self';
-    script-src 'self' 'nonce-${nonce}' 'strict-dynamic';
-    style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data:;
-    font-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https:;
+    style-src 'self' 'unsafe-inline' https:;
+    img-src 'self' blob: data: https:;
+    font-src 'self' data: https:;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
@@ -20,7 +20,6 @@ export function middleware(request: NextRequest) {
         .trim();
 
     const requestHeaders = new Headers(request.headers);
-    requestHeaders.set('x-nonce', nonce);
     requestHeaders.set('Content-Security-Policy', cspHeader);
 
     const response = NextResponse.next({
