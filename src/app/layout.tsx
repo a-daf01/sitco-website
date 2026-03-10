@@ -75,8 +75,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${cairo.variable} scroll-smooth`}>
-      <body className="antialiased bg-page text-main font-sans transition-colors duration-300">
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${cairo.variable} scroll-smooth`}>
+      <body suppressHydrationWarning className="antialiased bg-page text-main font-sans transition-colors duration-300">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var lang = localStorage.getItem('matrix-lang') || 'en';
+                var theme = localStorage.getItem('matrix-theme') || 'dark';
+                document.documentElement.lang = lang;
+                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+                if (theme === 'dark') document.documentElement.classList.add('dark');
+                else document.documentElement.classList.remove('dark');
+              } catch (e) {}
+            `
+          }}
+        />
         <MatrixProvider>
           <Navbar />
           {children}
