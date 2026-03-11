@@ -127,16 +127,26 @@ export default function ExitIntentModal() {
                                     <div className="w-16 h-16 bg-emerald-500/20 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <Download size={24} />
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-2">Whitepaper Sent!</h3>
+                                    <h3 className="text-2xl font-bold mb-2">Whitepaper Unlocked!</h3>
                                     <p className="text-muted">
-                                        Check your inbox in the next few minutes. We've securely dispatched your copy to {email}.
+                                        Thank you for your interest. You can now download your exclusive executive guide below.
                                     </p>
-                                    <button
-                                        onClick={() => setIsOpen(false)}
-                                        className="mt-6 font-bold text-brand-500 hover:text-brand-400 transition-colors"
+                                    <a
+                                        href="/whitepaper.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="mt-6 inline-flex items-center gap-2 font-bold bg-brand-600 hover:bg-brand-500 text-white px-6 py-3 rounded-xl transition-all shadow-lg shadow-brand-500/25"
                                     >
-                                        Return to Site
-                                    </button>
+                                        <Download size={18} /> Download Now
+                                    </a>
+                                    <div className="mt-4">
+                                        <button
+                                            onClick={() => setIsOpen(false)}
+                                            className="mt-6 font-bold text-brand-500 hover:text-brand-400 transition-colors"
+                                        >
+                                            Return to Site
+                                        </button>
+                                    </div>
                                 </motion.div>
                             )}
                         </div>
