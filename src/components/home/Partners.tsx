@@ -113,8 +113,11 @@ const Partners = () => {
 
     return (
         <section className="py-16 bg-page border-y border-border relative overflow-hidden">
-            <div className="container mx-auto px-6 mb-10 text-center">
-                <p className="text-sm font-medium text-muted uppercase tracking-widest">{t('trustedBy')}</p>
+            <div className="container mx-auto px-6 mb-12 text-center flex justify-center">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20">
+                    <div className="w-2 h-2 rounded-full bg-brand-500 animate-pulse" />
+                    <p className="text-sm font-bold text-brand-500 uppercase tracking-widest">{t('trustedBy')}</p>
+                </div>
             </div>
 
             <InteractableMarquee />

@@ -18,7 +18,7 @@ export async function sendEmail(formData: EmailFormData) {
 
         const data = await resend.emails.send({
             from: 'SITCO Contact Form <onboarding@resend.dev>', // Use default until domain is verified
-            to: ['a.daf@sitcotech.com'], // Verified recipient or the user's email if testing
+            to: ['info@sitcotech.com'], // Verified recipient or the user's email if testing
             subject: `New Lead: ${name} - ${service}`,
             html: `
                 <h1>New Project Inquiry</h1>

@@ -68,6 +68,8 @@ export const metadata: Metadata = {
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { MatrixProvider } from "@/context/MatrixContext";
+import GlobalStickyCTA from "@/components/shared/GlobalStickyCTA";
+import ExitIntentModal from "@/components/shared/ExitIntentModal";
 
 export default function RootLayout({
   children,
@@ -95,20 +97,29 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <GlobalStickyCTA />
+          <ExitIntentModal />
         </MatrixProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "SITCO",
+              "@type": ["B2BBusiness", "Organization", "SoftwareApplication"],
+              "name": "SITCO (Sovereign Intelligent Technology Co.)",
               "url": "https://sitco.sa",
               "logo": "https://sitco.sa/sitco_logo.png",
+              "description": "Enterprise-grade AI Solutions, Sovereign Cloud, and ZATCA Phase 2 compliant ERP systems in Saudi Arabia.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Riyadh",
+                "addressCountry": "SA"
+              },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+966-11-000-0000",
-                "contactType": "customer service",
+                "telephone": "+966-53-502-0099",
+                "contactType": "sales",
+                "email": "info@sitcotech.com",
                 "areaServed": "SA",
                 "availableLanguage": ["en", "ar"]
               },

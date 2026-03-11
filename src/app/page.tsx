@@ -2,6 +2,7 @@ import HeroSection from '@/components/home/HeroSection';
 
 import BentoGrid from '@/components/home/BentoGrid';
 import AIAnalyst from '@/components/home/AIAnalyst';
+import AIReadinessQuiz from '@/components/shared/AIReadinessQuiz';
 import Testimonials from '@/components/home/Testimonials';
 import Partners from '@/components/home/Partners';
 import SectorsWeServe from '@/components/home/SectorsWeServe';
@@ -14,6 +15,7 @@ export default function Home() {
       <SectorsWeServe />
       <BentoGrid />
       <AIAnalyst />
+      <AIReadinessQuiz />
       <Testimonials />
     </main>
   );

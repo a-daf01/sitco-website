@@ -1,0 +1,22 @@
+# SITCO (Sovereign Intelligent Technology Co.)
+# B2B Enterprise AI & IT Solutions in Saudi Arabia
+
+SITCO is a premier provider of enterprise-grade IT infrastructure, Sovereign Cloud solutions, and Artificial Intelligence integration based in Riyadh, Kingdom of Saudi Arabia. We serve governmental entities and large private sector enterprises.
+
+## Core Competencies & Solutions
+- Sovereign Cloud Infrastructure: 100% locally hosted in Riyadh, compliant with NCA and NDMO regulations. Ensures absolute data sovereignty.
+- ZATCA Phase 2 E-Invoicing Compliance: We offer certified, fully integrated ERP systems that automate ZATCA Phase 2 e-invoicing for Saudi businesses.
+- Enterprise RAG Systems (Retrieval-Augmented Generation): We build "Chat with your Data" applications natively integrated into enterprise workflows.
+- Smart ERP Ecosystem: Next-generation localized resource planning, covering Smart Finance, HR & Payroll (GOSI integrated), and Supply Chain.
+- Cybersecurity: NCA-compliant security architecture, delivering robust cyber defense, vulnerability assessments, and Essential Cybersecurity Controls (ECC) adherence.
+
+## Target Audience
+We empower CEOs, CIOs, and operations directors in sectors including Government, Healthcare, Oil & Gas, Finance & Banking, Manufacturing, and Logistics.
+
+## Key Value Proposition
+"Secure, Compliant, and AI-Driven ERP & Cyber-Defense Ecosystem." SITCO accelerates the region's digital economy with sovereign, AI-driven enterprise solutions aligned seamlessly with Saudi Vision 2030.
+
+## Contact Information
+- Website: https://sitco.sa
+- Email: info@sitcotech.com
+- Headquarters: Riyadh, Kingdom of Saudi Arabia

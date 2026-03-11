@@ -46,7 +46,7 @@ const ContactHero = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                         {[
-                            { icon: MessageSquare, label: t('contactSupport'), text: "a.daf@sitcotech.com" },
+                            { icon: MessageSquare, label: t('contactSupport'), text: "info@sitcotech.com" },
                             { icon: Phone, label: t('contactLine'), text: "+966 53 502 0099" },
                             { icon: MapPin, label: t('contactHQ'), text: t('contactRiyadh') }
                         ].map((item, i) => (
