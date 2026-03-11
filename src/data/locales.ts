@@ -11,6 +11,8 @@ export const translations = {
         toggleTheme: "Theme",
         switchToArabic: "Switch to Arabic",
         switchToEnglish: "Switch to English",
+        enterpriseConsultant: "ENTERPRISE CONSULTANT",
+        bookFreeConsultant: "Book a Free Consultant",
 
         // Footer
         brandTagline: "Accelerating the region's digital economy with sovereign, AI-driven enterprise solutions.",
@@ -450,6 +452,8 @@ export const translations = {
         toggleTheme: "المظهر",
         switchToArabic: "التحويل للعربية",
         switchToEnglish: "التحويل للإنجليزية",
+        enterpriseConsultant: "مستشار مؤسسي",
+        bookFreeConsultant: "حجز استشارة مجانية",
 
         // Footer
         brandTagline: "تسريع الاقتصاد الرقمي للمملكة بحلول مؤسسية سيادية مدعومة بالذكاء الاصطناعي.",

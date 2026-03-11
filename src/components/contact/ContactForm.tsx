@@ -138,25 +138,25 @@ const ContactForm = () => {
                             className="space-y-6"
                         >
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-muted">{t('lblFullName')}</label>
+                                <label className="text-sm font-medium text-main">{t('lblFullName')}</label>
                                 <input
                                     type="text"
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className={`w-full bg-muted/5 border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors ${errors.name ? 'border-red-500' : 'border-border'}`}
+                                    className={`w-full bg-background border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors ${errors.name ? 'border-red-500' : 'border-border'}`}
                                     placeholder={t('phFullName')}
                                 />
                                 {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
                             </div>
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-muted">{t('lblEmail')}</label>
+                                <label className="text-sm font-medium text-main">{t('lblEmail')}</label>
                                 <input
                                     type="email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className={`w-full bg-muted/5 border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors ${errors.email ? 'border-red-500' : 'border-border'}`}
+                                    className={`w-full bg-background border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors ${errors.email ? 'border-red-500' : 'border-border'}`}
                                     placeholder={t('phEmail')}
                                 />
                                 {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
@@ -173,12 +173,12 @@ const ContactForm = () => {
                             className="space-y-6"
                         >
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-muted">{t('lblService')}</label>
+                                <label className="text-sm font-medium text-main">{t('lblService')}</label>
                                 <select
                                     name="service"
                                     value={formData.service}
                                     onChange={handleChange}
-                                    className="w-full bg-muted/5 border border-border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors appearance-none"
+                                    className="w-full bg-background border border-border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors appearance-none"
                                 >
                                     <option value="ERP System">{t('serviceERP')}</option>
                                     <option value="Cybersecurity Audit">{t('serviceCyber')}</option>
@@ -200,7 +200,7 @@ const ContactForm = () => {
                                         name="customService"
                                         value={formData.customService}
                                         onChange={handleChange}
-                                        className={`w-full bg-muted/5 border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors ${errors.customService ? 'border-red-500' : 'border-border'}`}
+                                        className={`w-full bg-background border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors ${errors.customService ? 'border-red-500' : 'border-border'}`}
                                         placeholder={t('serviceOther') + "..."}
                                     />
                                     {errors.customService && <p className="text-red-500 text-xs">{errors.customService}</p>}
@@ -208,12 +208,12 @@ const ContactForm = () => {
                             )}
 
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-muted">{t('lblBudget')}</label>
+                                <label className="text-sm font-medium text-main">{t('lblBudget')}</label>
                                 <select
                                     name="budget"
                                     value={formData.budget}
                                     onChange={handleChange}
-                                    className="w-full bg-muted/5 border border-border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors appearance-none"
+                                    className="w-full bg-background border border-border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors appearance-none"
                                 >
                                     <option value="100k - 500k SAR">{t('budget1')}</option>
                                     <option value="500k - 1M SAR">{t('budget2')}</option>
@@ -235,7 +235,7 @@ const ContactForm = () => {
                                         name="customBudget"
                                         value={formData.customBudget}
                                         onChange={handleChange}
-                                        className="w-full bg-muted/5 border border-border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors"
+                                        className="w-full bg-background border border-border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors"
                                         placeholder={t('serviceOther') + "..."}
                                     />
                                 </motion.div>
@@ -252,13 +252,13 @@ const ContactForm = () => {
                             className="space-y-6"
                         >
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-muted">{t('lblProjectDetails')}</label>
+                                <label className="text-sm font-medium text-main">{t('lblProjectDetails')}</label>
                                 <textarea
                                     name="message"
                                     rows={4}
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="w-full bg-muted/5 border border-border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors"
+                                    className="w-full bg-background border border-border rounded-lg p-4 text-main focus:outline-none focus:border-emerald-500 transition-colors"
                                     placeholder={t('phProjectDetails')}
                                 />
                             </div>

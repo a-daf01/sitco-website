@@ -56,7 +56,7 @@ const InteractableMarquee = () => {
     const x = useTransform(baseX, (v) => `${wrap(0, -33.33, v / 100)}%`);
 
     return (
-        <div className="overflow-hidden relative flex">
+        <div className="overflow-hidden relative flex" dir="ltr">
             <motion.div
                 className="flex gap-16 items-center min-w-max px-8 py-10 cursor-grab active:cursor-grabbing"
                 style={{ x }}

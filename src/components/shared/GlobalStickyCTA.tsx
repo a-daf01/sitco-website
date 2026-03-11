@@ -5,8 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Bot, ArrowRight, X } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export default function GlobalStickyCTA() {
+    const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
     const [isDismissed, setIsDismissed] = useState(false);
     const pathname = usePathname();
@@ -48,9 +50,9 @@ export default function GlobalStickyCTA() {
                                 <Bot size={24} />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-xs text-brand-500 font-bold uppercase tracking-wider">ENTERPRISE CONSULTANT</span>
+                                <span className="text-xs text-brand-500 font-bold uppercase tracking-wider">{t('enterpriseConsultant')}</span>
                                 <span className="text-main font-bold flex items-center gap-1 group-hover:text-brand-400 transition-colors">
-                                    Book a free Consultant <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                                    {t('bookFreeConsultant')} <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform rtl:group-hover:-translate-x-1 rtl:rotate-180" />
                                 </span>
                             </div>
                         </Link>
