@@ -38,11 +38,11 @@ export default function ExitIntentModal() {
         if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) return;
 
         await sendEmail({
-            name: "Whitepaper Download",
+            name: "Exit Intent Pop-up Lead",
             email: email,
-            service: "Whitepaper Lead",
+            service: "Whitepaper Download",
             budget: "N/A",
-            message: `Lead has requested the whitepaper: The 10 reasons why you MUST incorporate AI into your Business.`
+            message: `Lead has requested the whitepaper: "The 10 reasons why you MUST incorporate AI into your Business". \n\nSource: Exit Intent Pop-up Form.`
         });
 
         setSubmitted(true);
