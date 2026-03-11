@@ -96,6 +96,25 @@ export default function ExitIntentModal() {
                                         Don't leave your enterprise infrastructure vulnerable. Download our exclusive executive guide to securing your data while deploying LLMs.
                                     </p>
 
+                                    <div className="flex gap-4 mb-6">
+                                        <button
+                                            type="button"
+                                            className="flex-1 py-2 border border-brand-500 bg-brand-500/10 text-brand-500 rounded-lg font-bold transition-all"
+                                        >
+                                            English
+                                        </button>
+                                        <div className="flex-1 relative group">
+                                            <button
+                                                type="button"
+                                                disabled
+                                                className="w-full py-2 border border-border bg-muted/5 text-muted rounded-lg font-bold cursor-not-allowed opacity-50"
+                                            >
+                                                العربية
+                                            </button>
+                                            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-card border border-border px-2 py-0.5 rounded-full text-[10px] text-muted whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg z-20">Coming Soon</span>
+                                        </div>
+                                    </div>
+
                                     <form onSubmit={handleEmailSubmit} className="space-y-4">
                                         <div>
                                             <input
@@ -132,7 +151,7 @@ export default function ExitIntentModal() {
                                         Thank you for your interest. You can now download your exclusive executive guide below.
                                     </p>
                                     <a
-                                        href="/whitepaper.pdf"
+                                        href="/Top-10-Reasons-Why-You-NEED-AI-in-Your-Business.pdf"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="mt-6 inline-flex items-center gap-2 font-bold bg-brand-600 hover:bg-brand-500 text-white px-6 py-3 rounded-xl transition-all shadow-lg shadow-brand-500/25"
