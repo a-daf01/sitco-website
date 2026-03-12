@@ -70,6 +70,7 @@ import Footer from "@/components/layout/Footer";
 import { MatrixProvider } from "@/context/MatrixContext";
 import GlobalStickyCTA from "@/components/shared/GlobalStickyCTA";
 import ExitIntentModal from "@/components/shared/ExitIntentModal";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function RootLayout({
   children,
@@ -99,6 +100,7 @@ export default function RootLayout({
           <Footer />
           <GlobalStickyCTA />
           <ExitIntentModal />
+          <SpeedInsights />
         </MatrixProvider>
         <script
           type="application/ld+json"
